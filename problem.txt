@@ -1,0 +1,63 @@
+Problem: there is no centralized platform for organizing group cycling rides.
+Solution: create an application that would allow users to create, join, and view rides, etc.
+
+Problems:
+1. Strava's functionality is absent or poorly implemented/not popular/users don't know about it
+2. It's difficult to keep track of the status of the ride:
+    Is it still happening if the weather is bad?
+    When do rides start in the spring?
+    How many people are coming to the ride?
+    Who's leading the ride? Who's responsible for structure, directions, duration, intensity (pace)?
+    Who is the ride's target demographic? How intense is the ride? Is it drop or no-drop? what is the average speed? Is the ride split into subgroups (such as based on speed)?
+    What is the route of the ride? Where is the meeting spot? Are there coffee stops? If so, where?
+3. There are too many social media platforms to ensure that all ride participants have access to this information.
+
+Solutions:
+1. This app's sole objective (for now) will be to focus on organizing group rides.
+2. Every ride will include the above information, or as much of it as possible.
+3. The rides will be shareable across many platforms
+
+### User Stories ###
+
+# Need to have
+1. As a visitor, I want to browse rides
+2. As a visitor, I want to be able to create my user profile
+3. As as registered user (i.e. logged in visitor), I want to be able to create/edit/delete a ride:
+    Title
+    Date/time
+    Duration (moving time, total time (if stops), estimated return time)
+    Distance
+    Location (start/stops/end)
+    Intensity (average speeds)
+    Drop/no-drop
+    Number of people (min/max)
+    Elevation gain
+    Description
+    Image (optional)
+
+4. As a user, I want to be able to join rides
+5. As a user, I want to invite people to rides
+6. As a user, I want to view a ride's page
+7. As a user, I want to view my profile page
+8. As a user, I want to view profile pages of others
+9. As a user, I want to see the list of rides I created on my profile page
+10. As a ride organizer, I want to be able to see the list of people who are going to my ride
+11. As a user, I want to view the list of upcoming rides I've joined
+12. As a user, I want to be able to comment on a ride
+
+
+# Want to have
+13. As a user, I want to be able to search for rides based on certain attributes:
+    Title
+    Date/time
+    Distance
+    Location
+    Number of people
+    Drop/no-drop
+
+# Happy to have
+1. Integration with Strava
+2. Be able to log in with different social platforms (except Kik)
+3. As a user, I want to add friends
+4. As a user, I want to be able to schedule a ride
+5. Display rides that my friends are attending
