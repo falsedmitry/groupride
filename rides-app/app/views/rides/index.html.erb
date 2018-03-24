@@ -1,0 +1,9 @@
+<h4>Here are some rides:</h4>
+
+<ul>
+  <% @rides.each do |ride| %>
+    <li>
+      <%= link_to(ride.title, ride_path(ride)) %>
+    </li>
+  <% end %>
+</ul>
