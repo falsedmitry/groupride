@@ -1,0 +1,52 @@
+<%= render 'error', ride: @ride %>
+
+<%= form_for(ride) do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :date %><br>
+    <%= f.date_field :date %>
+  </p>
+  <p>
+    <%= f.label :duration %><br>
+    <%= f.number_field :duration %>
+  </p>
+  <p>
+    <%= f.label :distance %><br>
+    <%= f.number_field :distance %>
+  </p>
+  <p>
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </p>
+  <p>
+    <%= f.label :intensity %><br>
+    <%= f.text_field :intensity %>
+  </p>
+  <p>
+    <%= f.label "Drop ride?" %><br>
+    <%= f.check_box :drop %>
+  </p>
+  <p>
+    <%= f.label :number_of_riders %><br>
+    <%= f.number_field :number_of_riders %>
+  </p>
+  <p>
+    <%= f.label :elevation_gain %><br>
+    <%= f.number_field :elevation_gain %>
+  </p>
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :image %><br>
+    <%= f.text_area :image %>
+  </p>
+
+  <p>
+    <%= f.submit "Save" %>
+  </p>
+<% end %>
