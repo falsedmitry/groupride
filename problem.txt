@@ -36,17 +36,17 @@ Solutions:
     Image (optional)
 
 4. As a user, I want to be able to join rides
-5. As a user, I want to invite people to rides
 6. As a user, I want to view a ride's page
 7. As a user, I want to view my profile page
 8. As a user, I want to view profile pages of others
 9. As a user, I want to see the list of rides I created on my profile page
 10. As a ride organizer, I want to be able to see the list of people who are going to my ride
 11. As a user, I want to view the list of upcoming rides I've joined
-12. As a user, I want to be able to comment on a ride
 
 
 # Want to have
+5. As a user, I want to invite people to rides
+12. As a user, I want to be able to comment on a ride
 13. As a user, I want to be able to search for rides based on certain attributes:
     Title
     Date/time

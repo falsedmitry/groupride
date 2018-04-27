@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RidesApp</title>
+    <title>Ride App</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,7 +10,7 @@
 
   <body>
     <header>
-      <h2>Ride App</h2>
+      <h2><%= link_to("Ride App", root_path, {class: "title"}) %></h2>
     </header>
 
     <p>
