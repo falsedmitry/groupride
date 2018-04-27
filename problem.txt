@@ -1,3 +1,6 @@
+https://docs.google.com/document/d/1-57mqvPk_7X1jSYFG5NRx81eZWyu041Jl-BfhTdEjMA/edit
+
+
 Problem: there is no centralized platform for organizing group cycling rides.
 Solution: create an application that would allow users to create, join, and view rides, etc.
 
