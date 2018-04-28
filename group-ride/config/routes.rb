@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root 'rides#index'
 
-  resource :users, only: %i(new create show)
+  resources :users, only: %i(new create show)
   resources :rides
 
   resource :sessions, only: %i(new create destroy)

@@ -18,8 +18,13 @@ class UsersController < ApplicationController
       # Use _path in views
       redirect_to root_url
     else
+      flash[:alert] = "User#create save else"
       render :new
     end
+  end
+
+  def show
+    @user = User.find(params[:id])
   end
 
 
