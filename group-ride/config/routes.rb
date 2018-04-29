@@ -4,7 +4,12 @@ Rails.application.routes.draw do
   root 'rides#index'
 
   resources :users, only: %i(new create show)
-  resources :rides
+
+  resources :rides do
+    member do
+      post :join
+    end
+  end
 
   resource :sessions, only: %i(new create destroy)
 

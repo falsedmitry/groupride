@@ -26,13 +26,35 @@ class RidesController < ApplicationController
     @ride.elevation_gain = params[:ride][:elevation_gain]
     @ride.description = params[:ride][:description]
     @ride.image = params[:ride][:image]
-    @ride.owner = current_user
+    @ride.organizer = current_user
 
     if @ride.save
       redirect_to rides_url
     else
       render :new
     end
+  end
+
+  def join
+    @user = User.find(current_user.id)
+    @ride = Ride.find(params[:id])
+
+    begin
+      @ride.riders << @user
+    rescue ActiveRecord::RecordNotUnique
+      flash[:notice] = "You have already joined this ride!"
+      redirect_to ride_url(@ride)
+    rescue ActiveRecord::ActiveRecordError
+      # handle other ActiveRecord errors
+    rescue # StandardError
+      # handle most other errors
+    rescue Exception
+      # handle everything else
+      raise
+    end
+
+
+    # flash.now[:notice] = "Ride and Rider added."
   end
 
 end

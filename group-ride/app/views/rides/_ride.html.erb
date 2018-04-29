@@ -10,5 +10,7 @@
   <li>Number of Riders: <%= ride.number_of_riders %></li>
   <li>Elevation gain: <%= ride.elevation_gain %></li>
   <li>Description: <%= ride.description %></li>
-  <li>Organizer: <%= ride.owner.name %></li>
+  <li>Organizer: <%= ride.organizer.name %></li>
 </ul>
+
+<%= button_to "Join Ride", join_ride_path(ride) %>

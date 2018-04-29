@@ -23,7 +23,7 @@ Ride.create(
   number_of_riders: 1,
   elevation_gain: 20,
   description: "commute to bitmaker",
-  owner: User.find_by(name: "Dmitry")
+  organizer: User.find_by(name: "Dmitry")
 )
 
 Ride.create(
@@ -37,5 +37,5 @@ Ride.create(
   number_of_riders: 1,
   elevation_gain: 5,
   description: "commute to bitmaker",
-  owner: User.find_by(name: "Lily")
+  organizer: User.find_by(name: "Lily")
 )
