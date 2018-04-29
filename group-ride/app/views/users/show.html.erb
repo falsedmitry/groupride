@@ -1,1 +1,19 @@
 <h1>My Profile</h1>
+
+<h3>Rides Organized by <%= @user.name %></h3>
+<ul>
+  <% @owned_rides.each do |ride| %>
+    <li>
+      <%= link_to("#{ride.title}", ride_path(ride)) %>
+    </li>
+  <% end %>
+</ul>
+
+<h3>Upcoming Rides</h3>
+<ul>
+  <% @joined_rides.each do |ride| %>
+    <li>
+      <%= link_to("#{ride.title}", ride_path(ride)) %>
+    </li>
+  <% end %>
+</ul>

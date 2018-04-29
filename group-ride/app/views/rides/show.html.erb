@@ -1,1 +1,4 @@
 <%= render 'ride', ride: @ride %>
+
+<%= button_to "Join", join_ride_path(@ride) %>
+<%= button_to "Leave", leave_ride_path(@ride) %>

@@ -25,6 +25,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @owned_rides = @user.owned_rides.sort_by {|ride| ride.date}
+    @joined_rides = @user.rides.sort_by {|ride| ride.date}
   end
 
 
