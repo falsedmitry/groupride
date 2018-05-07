@@ -78,7 +78,7 @@ class RidesController < ApplicationController
     rescue ActiveRecord::RecordNotUnique
       flash[:notice] = "You have already joined this ride!"
     end
-    
+
     redirect_to ride_url(@ride)
   end
 
@@ -88,6 +88,7 @@ class RidesController < ApplicationController
 
     @ride.riders.delete(@user)
     flash[:notice] = "You are no longer part of this ride."
+    
     redirect_to ride_url(@ride)
   end
 
