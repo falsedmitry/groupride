@@ -1,5 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe Ride, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  before(:each) do
+    @user = create(:user)
+    @ride = create(:ride, organizer: @user)
+  end
+
+  it "is valid with valid attributes" do
+    expect(@ride).to be_valid
+  end
+
 end
