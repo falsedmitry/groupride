@@ -4,4 +4,8 @@ class Ride < ApplicationRecord
   alias_attribute :riders, :users
 
   validates :title, :date, :duration, presence: true
+
+  def self.search(title)
+    where('title iLIKE ?', "%#{title}%")
+  end
 end

@@ -3,7 +3,11 @@ class RidesController < ApplicationController
   before_action :require_user_authority, only: [:edit, :update, :destroy]
 
   def index
-    @rides = Ride.all
+    if params[:ride]
+      @rides = Ride.search(params[:ride])
+    else
+      @rides = Ride.all
+    end
   end
 
   def show
@@ -88,7 +92,7 @@ class RidesController < ApplicationController
 
     @ride.riders.delete(@user)
     flash[:notice] = "You are no longer part of this ride."
-    
+
     redirect_to ride_url(@ride)
   end
 
