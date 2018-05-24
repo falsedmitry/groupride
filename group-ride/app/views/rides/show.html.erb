@@ -1,4 +1,32 @@
-<%= render 'ride', ride: @ride %>
+<h2><%= @ride.title %></h2>
+
+<% if current_user == @ride.organizer %>
+  <%= link_to("Edit", edit_ride_path(@ride)) %>
+  |
+  <%= link_to("Delete", ride_path(@ride), method: :delete, data: {confirm: "Are you sure you want to delete this ride?"}) %>
+<% end %>
+
+<ul>
+  <li>Date: <%= @ride.date %></li>
+  <li>Distance: <%= @ride.distance %></li>
+  <li>Duration: <%= @ride.duration %></li>
+  <li>Location: <%= @ride.location %></li>
+  <li>Intensity: <%= @ride.intensity %></li>
+  <li>Drop? <%= @ride.drop %></li>
+  <li>Number of Riders: <%= @ride.number_of_riders %></li>
+  <li>Elevation gain: <%= @ride.elevation_gain %></li>
+  <li>Description: <%= @ride.description %></li>
+  <li>Organizer: <%= @ride.organizer.name %></li>
+</ul>
+
+<h3>Riders</h3>
+<ul>
+  <% @riders.each do |rider| %>
+    <li>
+      <%= link_to("#{rider.name}", user_path) %>
+    </li>
+  <% end %>
+</ul>
 
 <%= button_to "Join", join_ride_path(@ride) %>
 <%= button_to "Leave", leave_ride_path(@ride) %>
