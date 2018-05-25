@@ -1,7 +1,15 @@
 <div class="ride-panel">
-  <h4><%= link_to(ride.title, ride_path(ride)) %></h4>
+  <p><%= link_to(ride.title, ride_path(ride)) %></p>
   <p><%= ride.date.strftime("%A, %-d %B %Y, %I:%M %P") %></p>
   <p><%= ride.organizer.name %></p>
   <p><%= ride.riders.length %> riders</p>
 
+  <div id='map' style='width: 400px; height: 300px;'></div>
+  <script>
+    mapboxgl.accessToken = "<%= ENV['MAPBOX_KEY'] %>";
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v10'
+    });
+  </script>
 </div>
