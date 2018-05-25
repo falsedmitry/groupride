@@ -11,5 +11,14 @@
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v10'
     });
+
+    map.addControl(new mapboxgl.NavigationControl());
+
+    map.on('load', function () {
+      map.addSource('some id', {
+        type: 'geojson',
+        data: 'https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_10m_ports.geojson'
+      });
+    });
   </script>
 </div>
